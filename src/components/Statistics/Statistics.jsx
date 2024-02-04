@@ -1,5 +1,6 @@
 import s from './Statistics.module.css';
 import { colorRandomizer } from '../../utils/colorRandomizer';
+import PropTypes from 'prop-types';
 
 const Statistics = ({title, stats}) => {
   return (
@@ -17,3 +18,14 @@ const Statistics = ({title, stats}) => {
 }
 
 export default Statistics;
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
+    }),
+  ),
+};
