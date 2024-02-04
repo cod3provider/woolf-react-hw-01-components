@@ -1,6 +1,8 @@
-import s from './Statistics.module.css';
-import { colorRandomizer } from '../../utils/colorRandomizer';
 import PropTypes from 'prop-types';
+
+import s from './Statistics.module.css';
+
+import { colorRandomizer } from '../../utils/colorRandomizer';
 
 const Statistics = ({title, stats}) => {
   return (

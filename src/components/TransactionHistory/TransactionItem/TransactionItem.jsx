@@ -1,5 +1,6 @@
-import s from './TransactionItem.module.css';
 import PropTypes from 'prop-types';
+
+import s from './TransactionItem.module.css';
 
 const TransactionItem = ({ items }) => {
   return (
