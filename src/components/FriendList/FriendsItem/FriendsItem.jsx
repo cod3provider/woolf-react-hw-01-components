@@ -2,15 +2,15 @@ import PropTypes from 'prop-types';
 
 import s from './FriendsItem.module.css';
 
-const FriendsItem = ({ friends }) => {
+const FriendsItem = ({ isOnline, avatar, name }) => {
   return (
-    friends.map(({ id, isOnline, avatar, name }) => <li className={s.item} key={id}>
+    <li className={s.item}>
       <span className={isOnline ? s.online : s.offline}></span>
-      <img className={s.avatar} src={avatar} alt="User avatar" width="48" />
+      <img className={s.avatar} src={avatar} alt='User avatar' width='48' />
       <p className={s.name}>{name}</p>
-    </li>)
-  )
-}
+    </li>
+  );
+};
 
 export default FriendsItem;
 
@@ -21,6 +21,6 @@ FriendsItem.propTypes = {
       name: PropTypes.string.isRequired,
       isOnline: PropTypes.bool.isRequired,
       id: PropTypes.number.isRequired,
-    })
-  )
-}
+    }),
+  ),
+};
